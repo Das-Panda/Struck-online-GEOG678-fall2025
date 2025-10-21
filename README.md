@@ -2,7 +2,7 @@
 
 |Labs|
 |:------:|
-|[lab1](/Lab_01/README.md)|
+|[lab1:Github Setup](/Lab_01/README.md)|
 |[lab2](/Lab_02/README.md)|
 |[lab3](/Lab_03/README.md)|
 |[lab4](/Lab_04/README.md)|
