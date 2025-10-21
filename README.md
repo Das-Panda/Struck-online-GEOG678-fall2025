@@ -1,0 +1,1 @@
+# Struck-online-GEOG678-fall2025
