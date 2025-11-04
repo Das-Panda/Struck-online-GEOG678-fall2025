@@ -1,7 +1,7 @@
 # Lab 2 – ArcGIS Online (Web GIS & Field Maps)
 **Course:** GEOG 678 / 699 – WebGIS  
 **Student:** Kenneth Struck  
-**Date:** [11 3, 2025]
+**Date:** November 3, 2025  
 
 ---
 
@@ -22,10 +22,10 @@ This lab provided hands-on experience using **ArcGIS Online** and **ArcGIS Field
 - Published a **Basic Instant App** with legend, layer list, and search.
 
 **Web App Link:**  
-👉 [My First Web App – Kenneth Struck](PASTE_WEB_APP_URL_HERE)
+👉 [My First Web App – Kenneth Struck](https://arcg.is/0y9qHq1)
 
 **Screenshot (optional):**  
-![Web Map Screenshot](([https://arcg.is/0y9qHq1](https://github.com/Das-Panda/Struck-online-GEOG678-fall2025/blob/main/Lab_02/IMG_0124.png)))
+![Web Map Screenshot](https://github.com/Das-Panda/Struck-online-GEOG678-fall2025/blob/main/Lab_02/IMG_0124.png)
 
 ---
 
@@ -41,7 +41,7 @@ This lab provided hands-on experience using **ArcGIS Online** and **ArcGIS Field
 - Opened map in **ArcGIS Field Maps**, added a test point, and submitted data.
 
 **Screenshot (Required):**  
-![Field Maps Screenshot](INSERT_FIELD_MAPS_SCREENSHOT_FILENAME_HERE)
+![Field Maps Screenshot](https://github.com/Das-Panda/Struck-online-GEOG678-fall2025/blob/main/Lab_02/INSERT_FIELD_MAPS_SCREENSHOT_FILENAME_HERE.png)
 
 > *Note:* ArcGIS Field Maps was used as the current replacement for Collector for ArcGIS.
 
@@ -54,5 +54,4 @@ This lab provided hands-on experience using **ArcGIS Online** and **ArcGIS Field
 
 ---
 
-**Files in this folder**
-
+## 📂 Files in this folder
