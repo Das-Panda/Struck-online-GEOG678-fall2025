@@ -40,10 +40,10 @@ https://tamu.maps.arcgis.com/apps/mapviewer/index.html?webmap=acec869f36cf48ca82
 
 **Web App Link (Field Map):**  
 👉 [Parks Data Collection – Kenneth Struck](https://arcg.is/0y9qHq1)
+https://tamu.maps.arcgis.com/apps/mapviewer/index.html?webmap=acec869f36cf48ca82b8a17ce05305a0
 
 **Screenshot (Required):**  
 ![Field Map Screenshot](https://github.com/Das-Panda/Struck-online-GEOG678-fall2025/blob/main/Lab_02/IMG_0124.png)
-https://tamu.maps.arcgis.com/apps/mapviewer/index.html?webmap=acec869f36cf48ca82b8a17ce05305a0
 
 > *Note:* ArcGIS Field Maps was used as the current replacement for Collector for ArcGIS.
 
@@ -55,5 +55,6 @@ https://tamu.maps.arcgis.com/apps/mapviewer/index.html?webmap=acec869f36cf48ca82
 - Demonstrated the ability to configure pop-ups, apply filters, and use domains for consistent data entry.
 
 ---
+
 
 
