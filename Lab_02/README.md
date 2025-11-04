@@ -22,7 +22,8 @@ This lab provided hands-on experience using **ArcGIS Online** and **ArcGIS Field
 - Published a **Basic Instant App** with legend, layer list, and search.
 
 **Web App Link:**  
-👉 [My First Web App – Kenneth Struck]https://arcg.is/10CG1X2
+👉 [Adult Obeasty Rates 2020 – Kenneth Struck](https://arcg.is/10CG1X2)
+https://tamu.maps.arcgis.com/apps/mapviewer/index.html?webmap=acec869f36cf48ca82b8a17ce05305a0
 
 ---
 
@@ -38,10 +39,11 @@ This lab provided hands-on experience using **ArcGIS Online** and **ArcGIS Field
 - Opened map in **ArcGIS Field Maps**, added a test point, and submitted data.
 
 **Web App Link (Field Map):**  
-👉 [Parks Data Collection – Kenneth Struck](https://arcg.is/0y9qHq1))
+👉 [Parks Data Collection – Kenneth Struck](https://arcg.is/0y9qHq1)
 
 **Screenshot (Required):**  
 ![Field Map Screenshot](https://github.com/Das-Panda/Struck-online-GEOG678-fall2025/blob/main/Lab_02/IMG_0124.png)
+https://tamu.maps.arcgis.com/apps/mapviewer/index.html?webmap=acec869f36cf48ca82b8a17ce05305a0
 
 > *Note:* ArcGIS Field Maps was used as the current replacement for Collector for ArcGIS.
 
@@ -53,4 +55,5 @@ This lab provided hands-on experience using **ArcGIS Online** and **ArcGIS Field
 - Demonstrated the ability to configure pop-ups, apply filters, and use domains for consistent data entry.
 
 ---
+
 
