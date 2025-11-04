@@ -25,7 +25,7 @@ This lab provided hands-on experience using **ArcGIS Online** and **ArcGIS Field
 👉 [My First Web App – Kenneth Struck](PASTE_WEB_APP_URL_HERE)
 
 **Screenshot (optional):**  
-![Web Map Screenshot]((https://arcg.is/0y9qHq1))
+![Web Map Screenshot](([https://arcg.is/0y9qHq1](https://github.com/Das-Panda/Struck-online-GEOG678-fall2025/blob/main/Lab_02/IMG_0124.png)))
 
 ---
 
@@ -55,3 +55,4 @@ This lab provided hands-on experience using **ArcGIS Online** and **ArcGIS Field
 ---
 
 **Files in this folder**
+
