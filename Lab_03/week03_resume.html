@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kenneth Struck — Resume</title>
+
+  <!-- Fonts (optional but classy) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#f6f7fb;
+      --card:#ffffff;
+      --ink:#1f2937;           /* primary text (dark slate) */
+      --muted:#6b7280;         /* secondary text (gray) */
+      --accent:#3b82f6;        /* blue */
+      --accent-2:#16a34a;      /* green (2nd color requirement) */
+      --rule:#e5e7eb;
+    }
+
+    *{box-sizing:border-box;}
+
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--ink);
+      font-family:'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      line-height:1.6;
+    }
+
+    /* Layout & alignment */
+    .container{
+      max-width:1000px;
+      margin:40px auto;
+      padding:0 20px;
+    }
+
+    header{
+      background:var(--card);
+      border:1px solid var(--rule);
+      border-radius:14px;
+      padding:28px;
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:space-between; /* aligns content nicely */
+      gap:18px;
+      box-shadow:0 6px 18px rgba(0,0,0,.04);
+    }
+
+    .id{
+      display:flex;
+      align-items:flex-start;
+      gap:16px;
+    }
+
+    .avatar{
+      width:64px;height:64px;border-radius:50%;
+      background:linear-gradient(135deg,var(--accent),var(--accent-2));
+      flex:0 0 64px;
+    }
+
+    h1{
+      margin:0;
+      font-size:1.9rem;
+      font-weight:800;
+      letter-spacing:.02em;
+      color:var(--accent);           /* colored heading */
+      text-transform:uppercase;      /* requirement hit earlier lessons style */
+    }
+
+    .subtitle{
+      margin-top:2px;
+      color:var(--muted);
+      font-size:.98rem;
+    }
+
+    .contact{
+      text-align:right;
+      min-width:260px;
+    }
+
+    .contact a{
+      color:var(--accent);
+      text-decoration:none;
+      font-weight:600;
+    }
+    .contact a:hover{ text-decoration:underline; }
+
+    main{
+      margin-top:24px;
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;  /* aligned two-column layout via CSS */
+      gap:24px;
+    }
+
+    section{
+      background:var(--card);
+      border:1px solid var(--rule);
+      border-radius:14px;
+      padding:24px;
+      box-shadow:0 6px 18px rgba(0,0,0,.04);
+    }
+
+    h2{
+      margin:0 0 10px;
+      font-size:1.25rem;
+      color:var(--ink);
+      font-weight:800;
+      border-bottom:2px solid var(--rule);
+      padding-bottom:8px;
+      letter-spacing:.02em;
+      text-transform:uppercase;
+    }
+
+    h3{
+      margin:.6rem 0 .2rem;
+      font-size:1.05rem;
+      font-weight:700;
+      color:var(--accent-2); /* second accent color */
+    }
+
+    h4{
+      margin:.2rem 0 .6rem;
+      font-size:.95rem;
+      font-weight:600;
+      color:var(--muted);
+    }
+
+    p{ margin:.4rem 0 .9rem; }
+
+    ul{
+      margin:.2rem 0 .8rem 1.1rem;
+      padding:0;
+    }
+
+    li{ margin:.25rem 0; }
+
+    .pill{
+      display:inline-block;
+      border:1px solid var(--rule);
+      padding:.28rem .55rem;
+      border-radius:999px;
+      margin:.18rem;
+      font-size:.88rem;
+      background:#fbfbfd;
+    }
+
+    .meta{ color:var(--muted); font-size:.92rem; }
+
+    footer{
+      text-align:center;
+      color:var(--muted);
+      font-size:.9rem;
+      margin:30px 0 18px;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px){
+      main{ grid-template-columns: 1fr; }
+      .contact{ text-align:left; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="id">
+        <div class="avatar" aria-hidden="true"></div>
+        <div>
+          <h1>Kenneth Struck</h1>
+          <p class="subtitle">GIS & Computer Science • Web GIS • Remote Sensing • Data Visualization</p>
+        </div>
+      </div>
+
+      <div class="contact">
+        <!-- Use real contact details if you want; kept privacy-friendly -->
+        <p><a href="https://www.linkedin.com/in/kenneth-struck/" target="_blank" rel="noopener">LinkedIn</a> &nbsp;•&nbsp;
+           <a href="https://github.com/Das-Panda" target="_blank" rel="noopener">GitHub</a></p>
+        <p class="meta">Denton / North Texas • Willing to travel & remote-friendly</p>
+      </div>
+    </header>
+
+    <main>
+      <!-- LEFT COLUMN -->
+      <section>
+        <h2>Experience</h2>
+
+        <article>
+          <h3>Founder & GIS Consultant — Struck LLC</h3>
+          <h4>2024 — Present • Texas</h4>
+          <p>Provide GIS analysis, dashboards, and lightweight web apps for land, education, and transportation use cases. Deliverables include ArcGIS Pro projects, ArcGIS Online web maps/Instant Apps, and StoryMaps.</p>
+          <ul>
+            <li>Built an ArcGIS Dashboard exploring Texas school voucher impacts by county, combining demographic layers with private-school counts and filters.</li>
+            <li>Automated geoprocessing with ArcPy (buffering, raster reclass, suitability modeling) and exported publication-ready map layouts.</li>
+          </ul>
+        </article>
+
+        <article>
+          <h3>Undergraduate Research / Projects — University of North Texas</h3>
+          <h4>2023 — 2024</h4>
+          <p>Developed academic and applied GIS projects blending CS and geospatial analysis.</p>
+          <ul>
+            <li>Remote sensing labs (radiometric quantities, atmospheric paths, calibration) and multispectral system comparisons.</li>
+            <li>Web GIS & Field Maps labs: authored feature layers, mobile collection workflows, and Instant Apps.</li>
+          </ul>
+        </article>
+
+        <h2>Selected Projects</h2>
+        <ul>
+          <li><strong>Texas Education Dashboard:</strong> Interactive county map + charts in ArcGIS Dashboards (filters, selectors, popups).</li>
+          <li><strong>Satellite Pass Tracker (in progress):</strong> Python app to predict visible satellite passes, log contacts, and manage favorites.</li>
+          <li><strong>ArcPy Automation Suite:</strong> Scripts for raster reclass, buffers, batch layout export, and CSV summaries.</li>
+        </ul>
+      </section>
+
+      <!-- RIGHT COLUMN -->
+      <section>
+        <h2>Education</h2>
+        <p><strong>M.S. (in progress), Geographic Information Science & Technology</strong><br />
+           Texas A&amp;M University — Online</p>
+        <p><strong>B.S., GIS &amp; Computer Science</strong><br />
+           University of North Texas</p>
+
+        <h2>Skills</h2>
+        <ul>
+          <li><strong>GIS & RS:</strong> ArcGIS Pro, ArcGIS Online, Field Maps, StoryMaps, Map Algebra, Raster analysis, Remote sensing</li>
+          <li><strong>Programming:</strong> Python (ArcPy), C/C++, HTML/CSS, basic JS</li>
+          <li><strong>Data & Viz:</strong> Geodatabases, CSV/Excel, dashboards, map design</li>
+          <li><strong>Ops & Labs:</strong> Ubiquiti/UNVR, servers, basic networking</li>
+        </ul>
+
+        <h2>Certs & Community</h2>
+        <ul>
+          <li>Amateur Radio (HAM) — Callsign <strong>KJ5LLP</strong>; GMRS license</li>
+          <li>Member: BMW CCA (events & touring)</li>
+        </ul>
+
+        <h2>Tech Highlights</h2>
+        <p>
+          <span class="pill">ArcGIS Pro</span>
+          <span class="pill">ArcPy</span>
+          <span class="pill">AGOL</span>
+          <span class="pill">Field Maps</span>
+          <span class="pill">StoryMaps</span>
+          <span class="pill">Python</span>
+          <span class="pill">C/C++</span>
+          <span class="pill">HTML/CSS</span>
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© <span id="year"></span> Kenneth Struck • <a href="https://www.linkedin.com/in/kenneth-struck/" target="_blank" rel="noopener" style="color:var(--accent)">Connect on LinkedIn</a></p>
+    </footer>
+  </div>
+
+  <script>
+    // tiny enhancement: current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
