@@ -1,16 +1,15 @@
-// --------------------------
-// Helper functions
-// --------------------------
-
 function findTopLeft(data) {
     let maxLat = -Infinity;
     let minLon = Infinity;
     let selected = null;
 
     data.forEach(p => {
-        if (p.Lat > maxLat || (p.Lat === maxLat && p.Lon < minLon)) {
-            maxLat = p.Lat;
-            minLon = p.Lon;
+        const lat = p.lat;
+        const lon = p.lon;
+
+        if (lat > maxLat || (lat === maxLat && lon < minLon)) {
+            maxLat = lat;
+            minLon = lon;
             selected = p;
         }
     });
@@ -24,9 +23,12 @@ function findTopRight(data) {
     let selected = null;
 
     data.forEach(p => {
-        if (p.Lat > maxLat || (p.Lat === maxLat && p.Lon > maxLon)) {
-            maxLat = p.Lat;
-            maxLon = p.Lon;
+        const lat = p.lat;
+        const lon = p.lon;
+
+        if (lat > maxLat || (lat === maxLat && lon > maxLon)) {
+            maxLat = lat;
+            maxLon = lon;
             selected = p;
         }
     });
@@ -40,9 +42,12 @@ function findBottomLeft(data) {
     let selected = null;
 
     data.forEach(p => {
-        if (p.Lat < minLat || (p.Lat === minLat && p.Lon < minLon)) {
-            minLat = p.Lat;
-            minLon = p.Lon;
+        const lat = p.lat;
+        const lon = p.lon;
+
+        if (lat < minLat || (lat === minLat && lon < minLon)) {
+            minLat = lat;
+            minLon = lon;
             selected = p;
         }
     });
@@ -56,9 +61,12 @@ function findBottomRight(data) {
     let selected = null;
 
     data.forEach(p => {
-        if (p.Lat < minLat || (p.Lat === minLat && p.Lon > maxLon)) {
-            minLat = p.Lat;
-            maxLon = p.Lon;
+        const lat = p.lat;
+        const lon = p.lon;
+
+        if (lat < minLat || (lat === minLat && lon > maxLon)) {
+            minLat = lat;
+            maxLon = lon;
             selected = p;
         }
     });
@@ -66,35 +74,30 @@ function findBottomRight(data) {
     return selected;
 }
 
-
 // --------------------------
-// Main Run() function (Task 3–7)
+// Main Run() function
 // --------------------------
-
 function Run() {
     console.clear();
-    
-    const email = "daspanda@tamu.edu";  //
+
+    const email = "daspanda@tamu.edu";
 
     console.log("Bounding box computed for: " + email);
 
-    // Pull the data array out of the JSON object (from data.js)
-    let data = theJSON.data;
+    // use the data array from data.js
+    const data = theJSON.data;
 
-    // Task 5: Call the corner functions
-    let topLeftPoint = findTopLeft(data);
-    let topRightPoint = findTopRight(data);
-    let bottomLeftPoint = findBottomLeft(data);
-    let bottomRightPoint = findBottomRight(data);
+    const topLeftPoint = findTopLeft(data);
+    const topRightPoint = findTopRight(data);
+    const bottomLeftPoint = findBottomLeft(data);
+    const bottomRightPoint = findBottomRight(data);
 
-    // Task 6: Build the final output object
-    let boundingBox = {
+    const boundingBox = {
         topLeft: topLeftPoint,
         topRight: topRightPoint,
         bottomLeft: bottomLeftPoint,
         bottomRight: bottomRightPoint
     };
 
-    // Task 7: Print email + bounding box
     console.log(boundingBox);
 }
