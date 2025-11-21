@@ -7,6 +7,6 @@
 |[lab3:Build Your Web Resume](/Lab_03/README.md)|
 |[lab4:Bounding Box (JS/JSON Programming)](/Lab_04/README.md)|
 |[lab5:Basic JS Mapping](/Lab_05/README.md)|
-|[lab6](/Lab_06/README.md)|
-|[lab7](/Lab_07/README.md)|
-|[lab8](/Lab_08/README.md)|
+|[lab6:Advanced JS Mapping](/Lab_06/README.md)|
+|[lab7:ArcGIS Story Map](/Lab_07/README.md)|
+|[lab8:Interactive Charts](/Lab_08/README.md)|
