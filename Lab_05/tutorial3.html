@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leaflet Tutorial 3 – Custom Icons</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""/>
+
+    <style>
+        #map {
+            height: 500px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Leaflet Tutorial 3 – Custom Icons</h2>
+<div id="map"></div>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""></script>
+
+<script>
+
+    // Initialize map
+    var map = L.map('map').setView([51.505, -0.09], 13);
+
+    // Tile layer
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Define custom Leaflet icon
+    var LeafIcon = L.Icon.extend({
+        options: {
+            shadowUrl: 'https://leafletjs.com/examples/custom-icons/leaf-shadow.png',
+            iconSize:     [38, 95],
+            shadowSize:   [50, 64],
+            iconAnchor:   [22, 94],
+            shadowAnchor: [4, 62],
+            popupAnchor:  [-3, -76]
+        }
+    });
+
+    // Create icon variations
+    var greenIcon = new LeafIcon({iconUrl: 'https://leafletjs.com/examples/custom-icons/leaf-green.png'});
+    var redIcon = new LeafIcon({iconUrl: 'https://leafletjs.com/examples/custom-icons/leaf-red.png'});
+    var orangeIcon = new LeafIcon({iconUrl: 'https://leafletjs.com/examples/custom-icons/leaf-orange.png'});
+
+    // Add markers with custom icons
+    L.marker([51.5, -0.09], {icon: greenIcon}).addTo(map)
+        .bindPopup("I am a green leaf.");
+
+    L.marker([51.495, -0.083], {icon: redIcon}).addTo(map)
+        .bindPopup("I am a red leaf.");
+
+    L.marker([51.49, -0.1], {icon: orangeIcon}).addTo(map)
+        .bindPopup("I am an orange leaf.");
+
+    // Add draggable marker (from tutorial)
+    L.marker([51.49, -0.08], {draggable: true}).addTo(map)
+        .bindPopup("Drag me around!");
+
+</script>
+
+</body>
+</html>
