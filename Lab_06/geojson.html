@@ -9,8 +9,6 @@
   <link
     rel="stylesheet"
     href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-    crossorigin=""
   />
 
   <style>
@@ -29,13 +27,10 @@
 <body>
   <div id="map"></div>
 
-  <!-- Leaflet JS -->
-  <script
-    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-otm/9S8HqT1H7LkR4xv7vC18JNpD33VfXWfLrCtbY0k="
-    crossorigin=""
-  ></script>
+  <!-- Leaflet JS library -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
+  <!-- Your custom JS MUST be in its own script tag -->
   <script>
     // ---------------------------------------------------
     // 1) Set up the map and base layer
@@ -59,11 +54,10 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [-104.99404, 39.75621] // [lon, lat]
+        "coordinates": [-104.99404, 39.75621]
       }
     };
 
-    // Basic marker created from GeoJSON
     L.geoJSON(geojsonFeature).addTo(map);
 
     // ---------------------------------------------------
@@ -139,7 +133,6 @@
       fillOpacity: 0.8
     };
 
-    // Same Coors Field feature, but rendered as circle marker
     L.geoJSON(geojsonFeature, {
       pointToLayer: function (feature, latlng) {
         return L.circleMarker(latlng, geojsonMarkerOptions);
@@ -150,7 +143,6 @@
     // 6) onEachFeature example (popups)
     // ---------------------------------------------------
     function onEachFeature(feature, layer) {
-      // Does this feature have a popupContent property?
       if (feature.properties && feature.properties.popupContent) {
         layer.bindPopup(feature.properties.popupContent);
       }
@@ -174,7 +166,7 @@
     }).addTo(map);
 
     // ---------------------------------------------------
-    // 7) filter example (only show features where show_on_map == true)
+    // 7) filter example
     // ---------------------------------------------------
     var someFeatures = [{
       "type": "Feature",
@@ -206,10 +198,6 @@
       },
       onEachFeature: onEachFeature
     }).addTo(map);
-
-    // ---------------------------------------------------
-    // End of full tutorial example
-    // ---------------------------------------------------
   </script>
 </body>
 </html>
