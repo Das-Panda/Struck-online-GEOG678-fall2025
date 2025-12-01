@@ -1,0 +1,63 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "name": "Raptor Road Trip – Simplified Loop",
+        "type": "Simplified Route",
+        "direction": "Full Loop",
+        "description": "General loop route from Denton to Colorado, Utah, Wyoming, and back to Denton using key waypoints."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-97.1331, 33.2148],
+          [-101.8313, 35.222],
+          [-104.4885, 36.9906],
+          [-104.8214, 38.8339],
+          [-108.551, 39.0639],
+          [-111.903, 40.7635],
+          [-112.3747, 40.575],
+          [-106.3282, 42.7646],
+          [-104.858, 39.005],
+          [-104.4885, 36.9906],
+          [-101.8313, 35.222],
+          [-97.1331, 33.2148]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 2,
+        "name": "Raptor Road Trip – Detailed Route",
+        "type": "Detailed Route",
+        "direction": "Full Loop with Major Stops",
+        "description": "More detailed line passing through major stops including Buena Vista, Independence Pass, Aspen, Vail, Grand Junction, Salt Lake City, and Wyoming high plains."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-97.1331, 33.2148],
+          [-101.8313, 35.222],
+          [-104.4885, 36.9906],
+          [-104.8214, 38.8339],
+          [-106.1311, 38.8422],
+          [-106.563, 39.109],
+          [-106.8175, 39.1911],
+          [-106.3742, 39.6403],
+          [-108.551, 39.0639],
+          [-111.903, 40.7635],
+          [-112.3747, 40.575],
+          [-106.3282, 42.7646],
+          [-104.858, 39.005],
+          [-104.4885, 36.9906],
+          [-101.8313, 35.222],
+          [-97.1331, 33.2148]
+        ]
+      }
+    }
+  ]
+}

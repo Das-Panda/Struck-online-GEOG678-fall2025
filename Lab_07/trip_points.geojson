@@ -1,0 +1,187 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "name": "Denton, Texas (Home Base)",
+        "type": "Start/End",
+        "leg": "Both",
+        "description": "Starting and ending point of the Raptor Assault road trip."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-97.1331, 33.2148]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 2,
+        "name": "Amarillo, Texas",
+        "type": "Stop",
+        "leg": "Outbound & Return",
+        "description": "Panhandle city along US-287 with wide open skies and plains."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-101.8313, 35.222]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 3,
+        "name": "Raton Pass Viewpoint",
+        "type": "Scenic Stop",
+        "leg": "Outbound & Return",
+        "description": "High mountain pass at the Colorado–New Mexico border marking the first entrance into the Rockies."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-104.4885, 36.9906]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 4,
+        "name": "Element Colorado Springs Downtown",
+        "type": "Hotel",
+        "leg": "Outbound",
+        "description": "First night in Colorado Springs; rooftop restaurant and bar with 220° view over the city and mountains where a storm rolled in from the Front Range."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-104.8214, 38.8339]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 5,
+        "name": "Buena Vista, Colorado",
+        "type": "Scenic Town",
+        "leg": "Outbound",
+        "description": "Valley town along the Arkansas River and launching point for the climb toward Independence Pass."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-106.1311, 38.8422]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 6,
+        "name": "Independence Pass & Continental Divide",
+        "type": "Scenic Stop",
+        "leg": "Outbound",
+        "description": "High alpine pass at 12,095 feet crossing the Continental Divide with clear weather and dramatic views."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-106.563, 39.109]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 7,
+        "name": "Aspen, Colorado",
+        "type": "Town",
+        "leg": "Outbound",
+        "description": "Quiet resort town in a high valley, visited out of tourist season with very little noise or traffic."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-106.8175, 39.1911]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 8,
+        "name": "Vail, Colorado",
+        "type": "Town",
+        "leg": "Outbound",
+        "description": "Alpine-style village with European architecture and peaceful mountain setting along I-70."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-106.3742, 39.6403]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 9,
+        "name": "Grand Junction, Colorado",
+        "type": "Town",
+        "leg": "Outbound",
+        "description": "Western Colorado city marking the transition from high Rockies toward Utah canyon country."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-108.551, 39.0639]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 10,
+        "name": "Le Méridien Salt Lake City Downtown",
+        "type": "Hotel",
+        "leg": "Outbound",
+        "description": "Downtown Salt Lake City hotel with rooftop views over the city grid and Wasatch Front."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.903, 40.7635]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 11,
+        "name": "Ford Raptor Assault School (Utah Motorsports Campus)",
+        "type": "Raptor School",
+        "leg": "Center of Trip",
+        "description": "Location of the Ford Performance Raptor Assault driving program with desert runs, rock crawling, and technical hill exercises."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-112.3747, 40.575]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 12,
+        "name": "Wyoming High Plains Overlook (near Casper)",
+        "type": "Scenic Stop",
+        "leg": "Return",
+        "description": "Rainy, windswept high plains landscape that felt like the Scottish Highlands, with rolling hills and almost no visible human development."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-106.3282, 42.7646]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 13,
+        "name": "Hotel Polaris – U.S. Air Force Academy",
+        "type": "Hotel",
+        "leg": "Return",
+        "description": "Hotel overlooking the U.S. Air Force Academy with panoramic views of the Front Range and academy grounds."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-104.858, 39.005]
+      }
+    }
+  ]
+}
