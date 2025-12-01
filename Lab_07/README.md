@@ -1,75 +1,112 @@
 # GEOG 678 – Lab 7  
-## Part A: ArcGIS StoryMap & Web Map  
+## ArcGIS StoryMaps & Web Mapping  
 **Author:** Kenneth Struck  
 **Course:** GEOG 678 – WebGIS  
 **Semester:** Fall 2025  
 
 ---
 
-## 📌 Overview  
-This repository contains all required files for **Lab 7 (Part A)**, including the GeoJSON datasets and documentation for creating a StoryMap and Web Map in ArcGIS Online.  
+# 📍 Overview  
+This repository contains all required materials for **Lab 7 (Parts A & B)**.  
+The lab focuses on creating:  
+- A 2D StoryMap documenting a real-world journey (Part A)  
+- A 3D WebScene and StoryMap analyzing a section of the Texas A&M University campus (Part B)
 
-My StoryMap documents a multi-state road trip from Denton, Texas to Colorado Springs, Aspen/Vail, Salt Lake City, and the Ford Performance Racing School (Raptor Assault).  
-The StoryMap includes narrative sections, photos, hotel stops, scenic viewpoints, and the full route visualized through custom points and polylines.
+Both parts include hosted feature layers, custom symbology, narrative storytelling, and interactive web mapping components required for the assignment.
 
 ---
 
+# 🅰 **Part A: Road Trip StoryMap & Web Map**
+
 ## 🌐 StoryMap  
 **From Texas to the Mountains: Ford Raptor Assault Road Trip**  
-🔗 https://storymaps.arcgis.com/stories/554157e1a27e4b4a896abb3f0be47d1c
+🔗 https://storymaps.arcgis.com/stories/554157e1a27e4b4a896abb3f0be47d1c  
+
+This StoryMap documents a multi-state road trip from Denton to Colorado Springs, Aspen/Vail, Salt Lake City, and back to Texas for the Ford Raptor Assault driving experience.  
+It includes:  
+- Stops, hotels, scenic viewpoints  
+- A complete mapped driving route  
+- Photos and narrative descriptions  
+- Custom popups and symbology  
 
 ---
 
 ## 🗺️ Web Map  
-The Web Map includes:  
-- Unique point symbology for hotels, scenic stops, towns, and the Raptor School  
-- Full outbound + return driving routes  
-- Custom HTML pop-ups  
-- 2D cartographic styling suitable for StoryMaps  
+**Raptor Assault Road Trip Map**  
+🔗 https://tamu.maps.arcgis.com/home/item.html?id=5d4f60348e004516a46ae210038a995e  
 
-🔗 **Web Map URL:**  
-https://tamu.maps.arcgis.com/home/item.html?id=5d4f60348e004516a46ae210038a995e
+The web map includes:  
+- All waypoints and stops  
+- Outbound and return routes  
+- Unique symbols for hotels, scenic stops, towns, and the Raptor School  
+- Configured HTML popups  
 
 ---
 
-## 🗂️ Files Included  
-
-### **GeoJSON Files**
-These were used to publish hosted feature layers in ArcGIS Online:
-
+## 🗂️ Part A Files Included (in this repository)  
 - `trip_points.geojson`  
-  - Contains all waypoints, hotels, scenic stops, towns, and school location  
-  - Attributes: name, type, description, id  
-
 - `trip_routes.geojson`  
-  - Contains multi-segment route geometry for the outbound and return drive  
-  - Attributes: name, id  
+
+These are the source datasets used to publish hosted layers within ArcGIS Online.
 
 ---
 
-## 📸 Screenshots  
-(Optional but recommended)  
-You may include screenshots of:  
-- Your Web Map symbology  
-- Pop-up configurations  
-- StoryMap section layout  
-- Final map view  
+# 🅱 **Part B: TAMU Campus 3D WebScene & StoryMap**
+
+## 🌐 StoryMap  
+**Major Sports Facilities at Texas A&M University**  
+🔗 https://storymaps.arcgis.com/stories/a259e69531b14ac888b25fb06c6a9980  
+
+This StoryMap embeds a 3D WebScene highlighting major athletics facilities on the Texas A&M campus, including Kyle Field and Blue Bell Park.  
+The StoryMap includes:  
+- A custom 3D WebScene  
+- Multiple viewpoint slides  
+- Descriptions of each facility  
+- A short conclusion on the usefulness of 3D GIS  
 
 ---
 
-## ✔️ Submission Checklist  
-This GitHub folder contains everything required for Lab 7 (Part A).  
-Submit the following on Canvas:
+## 🏟️ 3D WebScene  
+**TAMU Campus 3D – GEOG 678**  
+🔗 https://tamu.maps.arcgis.com/home/item.html?id=73deaba7e8794d2b991522dcc250aa29  
 
-- [x] StoryMap URL  
-- [x] Web Map URL  
-- [x] GitHub repository link  
-- [x] GeoJSON files uploaded  
-- [x] README included  
+The WebScene contains two main viewpoints:  
+1. **Kyle Field – Athletics District**  
+2. **Blue Bell Park – Baseball Stadium**  
+
+These slides were used within the StoryMap to communicate building scale and spatial relationships across the athletics district.
 
 ---
 
-## 📞 Contact  
-For questions about this lab:  
+# 📁 Recommended Repository Structure  
+
+/ (root)
+README.md
+/Part_A_GeoJSON/
+trip_points.geojson
+trip_routes.geojson
+/Part_B_Screenshots/ (optional)
+kyle_field_view.png
+blue_bell_park_view.png
+
+---
+
+# ✔ Submission Checklist  
+### **Part A**
+- [x] StoryMap link  
+- [x] Web Map link  
+- [x] GeoJSON files  
+- [x] README updated  
+
+### **Part B**
+- [x] StoryMap link  
+- [x] WebScene link  
+- [x] README updated  
+
+Everything required for Lab 7 has been completed and documented in this repository.
+
+---
+
+# 📞 Contact  
+If you have questions about this lab:  
 **kennethstruck@tamu.edu**
-
