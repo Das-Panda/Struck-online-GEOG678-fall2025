@@ -60,7 +60,7 @@ These are the source datasets used to publish hosted layers within ArcGIS Online
 This StoryMap embeds a 3D WebScene highlighting major athletics facilities on the Texas A&M campus, including Kyle Field and Blue Bell Park.  
 The StoryMap includes:  
 - A custom 3D WebScene  
-- Multiple viewpoint slides  
+- Viewpoint slide 
 - Descriptions of each facility  
 - A short conclusion on the usefulness of 3D GIS  
 
@@ -72,9 +72,8 @@ The StoryMap includes:
 
 The WebScene contains two main viewpoints:  
 1. **Kyle Field – Athletics District**  
-2. **Blue Bell Park – Baseball Stadium**  
 
-These slides were used within the StoryMap to communicate building scale and spatial relationships across the athletics district.
+This slide was used within the StoryMap to communicate building scale and spatial relationships across the athletics district.
 
 ---
 
@@ -87,7 +86,6 @@ trip_points.geojson
 trip_routes.geojson
 /Part_B_Screenshots/ (optional)
 kyle_field_view.png
-blue_bell_park_view.png
 
 ---
 
