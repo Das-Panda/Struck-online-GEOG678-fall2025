@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>College Station Weekly Temperature Forecast - D3</title>
+
+    <!-- D3 library -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 20px;
+      }
+
+      h1 {
+        margin-bottom: 0;
+      }
+
+      #chart {
+        margin-top: 20px;
+      }
+
+      .axis path,
+      .axis line {
+        fill: none;
+        stroke: #000;
+        shape-rendering: crispEdges;
+      }
+
+      .line-high {
+        fill: none;
+        stroke: steelblue;
+        stroke-width: 2px;
+      }
+
+      .line-low {
+        fill: none;
+        stroke: tomato;
+        stroke-width: 2px;
+      }
+
+      .dot-high {
+        fill: steelblue;
+      }
+
+      .dot-low {
+        fill: tomato;
+      }
+
+      .legend {
+        font-size: 12px;
+      }
+
+      .tooltip {
+        position: absolute;
+        padding: 4px 8px;
+        font-size: 11px;
+        background: white;
+        border: 1px solid #999;
+        border-radius: 3px;
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>College Station Weekly Temperature Forecast</h1>
+    <p>High and low temperatures (°F) for an 8-day period.</p>
+
+    <div id="chart"></div>
+
+    <script>
+      // Data from the lab instructions
+      var data = [
+        { day: "Sat", high: 82, low: 67 },
+        { day: "Sun", high: 81, low: 59 },
+        { day: "Mon", high: 81, low: 50 },
+        { day: "Tue", high: 70, low: 47 },
+        { day: "Wed", high: 77, low: 51 },
+        { day: "Thu", high: 78, low: 60 },
+        { day: "Fri", high: 79, low: 66 },
+        { day: "Sat 2", high: 80, low: 66 }
+      ];
+
+      var margin = { top: 40, right: 100, bottom: 40, left: 50 },
+          width  = 800 - margin.left - margin.right,
+          height = 400 - margin.top - margin.bottom;
+
+      var svg = d3.select("#chart")
+        .append("svg")
+          .attr("width",  width  + margin.left + margin.right)
+          .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+          .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+      // X scale: days (categorical)
+      var x = d3.scalePoint()
+        .domain(data.map(function(d) { return d.day; }))
+        .range([0, width])
+        .padding(0.5);
+
+      // Y scale: temperature
+      var minTemp = d3.min(data, function(d) { return d.low; });
+      var maxTemp = d3.max(data, function(d) { return d.high; });
+
+      var y = d3.scaleLinear()
+        .domain([minTemp - 5, maxTemp + 5])
+        .range([height, 0]);
+
+      // Axes
+      var xAxis = d3.axisBottom(x);
+      var yAxis = d3.axisLeft(y);
+
+      svg.append("g")
+        .attr("class", "axis x-axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxis);
+
+      svg.append("g")
+        .attr("class", "axis y-axis")
+        .call(yAxis)
+        .append("text")
+          .attr("fill", "#000")
+          .attr("transform", "rotate(-90)")
+          .attr("y", -40)
+          .attr("x", -height / 2)
+          .attr("dy", "0.71em")
+          .style("text-anchor", "middle")
+          .text("Temperature (°F)");
+
+      // Line generators
+      var lineHigh = d3.line()
+        .x(function(d) { return x(d.day); })
+        .y(function(d) { return y(d.high); })
+        .curve(d3.curveMonotoneX);
+
+      var lineLow = d3.line()
+        .x(function(d) { return x(d.day); })
+        .y(function(d) { return y(d.low); })
+        .curve(d3.curveMonotoneX);
+
+      // Lines
+      svg.append("path")
+        .datum(data)
+        .attr("class", "line-high")
+        .attr("d", lineHigh);
+
+      svg.append("path")
+        .datum(data)
+        .attr("class", "line-low")
+        .attr("d", lineLow);
+
+      // Tooltip
+      var tooltip = d3.select("body")
+        .append("div")
+        .attr("class", "tooltip")
+        .style("opacity", 0);
+
+      function showTooltip(d, seriesName) {
+        var value = seriesName === "High" ? d.high : d.low;
+        tooltip.transition().duration(150).style("opacity", 0.9);
+        tooltip
+          .html(
+            "<strong>" + d.day + "</strong><br/>" +
+            seriesName + ": " + value + " °F"
+          )
+          .style("left", (d3.event.pageX + 10) + "px")
+          .style("top", (d3.event.pageY - 20) + "px");
+      }
+
+      function hideTooltip() {
+        tooltip.transition().duration(150).style("opacity", 0);
+      }
+
+      // Points for highs
+      svg.selectAll(".dot-high")
+        .data(data)
+        .enter()
+        .append("circle")
+          .attr("class", "dot-high")
+          .attr("r", 4)
+          .attr("cx", function(d) { return x(d.day); })
+          .attr("cy", function(d) { return y(d.high); })
+          .on("mouseover", function(d) { showTooltip(d, "High"); })
+          .on("mouseout", hideTooltip);
+
+      // Points for lows
+      svg.selectAll(".dot-low")
+        .data(data)
+        .enter()
+        .append("circle")
+          .attr("class", "dot-low")
+          .attr("r", 4)
+          .attr("cx", function(d) { return x(d.day); })
+          .attr("cy", function(d) { return y(d.low); })
+          .on("mouseover", function(d) { showTooltip(d, "Low"); })
+          .on("mouseout", hideTooltip);
+
+      // Legend
+      var legend = svg.append("g")
+        .attr("class", "legend")
+        .attr("transform", "translate(" + (width + 10) + ",0)");
+
+      legend.append("circle")
+        .attr("cx", 0)
+        .attr("cy", 5)
+        .attr("r", 5)
+        .style("fill", "steelblue");
+
+      legend.append("text")
+        .attr("x", 12)
+        .attr("y", 9)
+        .text("High (°F)");
+
+      legend.append("circle")
+        .attr("cx", 0)
+        .attr("cy", 25)
+        .attr("r", 5)
+        .style("fill", "tomato");
+
+      legend.append("text")
+        .attr("x", 12)
+        .attr("y", 29)
+        .text("Low (°F)");
+    </script>
+  </body>
+</html>
